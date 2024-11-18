@@ -1,28 +1,50 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="style.css" rel="stylesheet">
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
 </head>
+
 <body>
-    <div class="container"></div>
-    <script>
-        const container = document.querySelector(".container");
+<h1>Etch-A-Sketch!</h1>
+<div class="main-container">
 
-            function makeRows(rows, cols) {
-                container.style.setProperty('--grid-rows', rows);
-                container.style.setProperty('--grid-cols', cols);
-                
-                for (c = 0; c < (rows * cols); c++) {
-                    let cell = document.createElement("div");
-                    cell.innerText = (c + 1);
-                    container.appendChild(cell).className = "grid-item";
-                };
-            };
+    <div class="side-menu">
+        <div class="pen-colors-container">
+            <div class="color-items-container">
+                <div class="color-item"></div>
+                <div class="color-item"></div>
+                <div class="color-item"></div>
+                <div class="color-item"></div>
+                <div class="color-item"></div>
+            </div>
+            <div class="pen-colors-subtitle">Pen Color</div>
+        </div>
 
-        makeRows(16, 16);
-    </script>
+        <div class="buttons-container">
+            <button class="btn" id="toggle-draw-on-mouse-press-btn">Draw On Mouse Press</button>
+            <button class="btn" id="toggle-eraser-btn">Toggle Eraser</button>
+            <button class="btn" id="toggle-rainbow-btn">Toggle Rainbow</button>
+            <button class="btn" id="toggle-shading-btn">Toggle Shading</button>
+            <button class="btn" id="toggle-grid-lines-btn">Toggle Grid Lines</button>
+            <button class="btn" id="change-grid-size-btn">Change Grid Size</button>
+            <button class="btn" id="clear-grid-btn">Clear</button>
+        </div>
+
+
+    </div>
+
+    <div class="grid-container">
+        <div class="grid"></div>
+    </div>
+
+</div>
+<div class="footer">
+    <div>The Odin Project</div>
+    <div>For Practice</div>   
+</div>
 </body>
+
 </html>
